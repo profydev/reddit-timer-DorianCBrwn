@@ -6,19 +6,21 @@ import GlobalStyle from './GlobalStyles';
 import theme from './theme';
 
 function App() {
-  <ThemeProvider theme={theme}>
-    <Router>
-      <Normalize />
-      <GlobalStyle />
-      <Switch>
-        <Route exact path="/">
-          Home
-        </Route>
-        <Route path="/search">Search</Route>
-        <Route>404 - Not Found</Route>
-      </Switch>
-    </Router>
-  </ThemeProvider>;
+  return (
+    <ThemeProvider theme={theme}>
+      <Router>
+        <Normalize />
+        <GlobalStyle />
+        <Switch>
+          <Route exact path="/">
+            Home
+          </Route>
+          <Route path="/search">Search</Route>
+          <Route>404 - Not Found</Route>
+        </Switch>
+      </Router>
+    </ThemeProvider>
+  );
 }
 
 export default App;
